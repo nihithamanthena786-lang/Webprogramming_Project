@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley:wght@400;700&display=swap" rel="stylesheet">
+    <head>
+        <title>The recipe House-The book</title>
+
+    
+  <style>
+    *{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+         }
+    h1{
+        font-family: 'Tangerine', cursive;
+        font-size: 70px;
+        color: #0f0404;
+    }
+     h2{
+        font-family: 'Dancing Script', cursive;
+        font-size: 20px;
+        color: #fffdfd;
+    }
+    h3{
+        font-family:'Tangerine', cursive;
+        font-size: 50px;
+        color: #f1ecec;
+    }
+    p{
+        font-family: 'Parisienne', cursive;
+        font-size: 20px;
+        letter-spacing: 2px;
+
+    }
+
+	body{
+		font-family: 'Dancing Script', cursive;
+        font-size: 30px;
+        text-align: center;
+		background-color: #c9841c;
+		color: #f5f1f1 ;
+	}
+	
+	nav{
+		display : flex;	
+        justify-content:space-between;
+        align-items:center;
+        padding: 20px;
+        background-color: #fffffff5;
+    }
+    nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav h1{
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    color: #0f0404; 
+
+}
+nav ul li a {
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    color: #0f0404;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #c9841c;
+}
+.hero {
+    height:2500px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("https://i.pinimg.com/1200x/1c/52/da/1c52da47122a723758622a3c2f9cad4d.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.search-bar input {
+    width: 300px;
+    padding: 10px 15px;
+    border: 2px solid #c9841c;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 14px;
+    color: #c9841c;
+    outline:#f5f4f3;
+}
+.search-bar button {
+    padding: 10px 14px;
+    border: 2px solid #c9841c;
+    border-radius:20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.recipe-table {
+    width: 90%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.recipe-header h2{
+    
+    text-align: center;
+    padding: 30px 0;
+    background-color: none;
+    color: #fffdfd;
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+}
+.recipe-table th {
+    padding: 18px;
+    background-color: #e6e5eb;
+    color: #fcfbfb;
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+}
+.recipe-table td {
+    padding: 10px;
+    color: #0f0404;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 20px;
+    border-bottom: 1px solid #c9841c;
+    vertical-align: middle;
+}
+.recipe-table .recipe-image{
+    padding:0;
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    
+}
+.recipe-table .recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.recipe-table td h3 {
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    color: #fcfcfc;
+}
+.recipe-table tr:hover {
+    background-color: rgba(201, 132, 28, 0.12);
+}
+.recipe-table-section td{
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(241, 214, 191, 0.082);
+    font-family: 'Arial', cursive;
+    font-size: 15px;
+}
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+}
+.image-overlay h3 {
+    margin-top: 50px;
+    font-family: 'Tangerine', cursive;
+    font-size: 20px;
+    color: #0a0101;
+}
+button {
+    padding: 10px 20px;
+    background-color: #c9841c;
+    color: #fffdfd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Arial', cursive;
+    font-size: 15px;
+}
+.button-section {
+    padding: 20px;
+    background-color:none;
+    color: #e1b79e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+</style>
+</head>
+<body>
+    <nav>
+        <h1>The Recipe House</h1>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search for a recipe...">
+            <button>🔍</button>
+        </div>
+
+        <ul>
+            <li><a href="TheRecipe1.html">Home</a></li>
+            <li><a href="TheBook.html">Recipes</a></li>
+            <li><a href="regions.html">About</a></li>
+            <li><a href="about.html">User</a></li>
+        </ul>
+    </nav>
+<section class="hero">
+    <section class="recipe-header">
+        <h2>Explore Our Recipes </h2>
+    </section>
+    <section class="recipe-table-section">
+
+    <table class="recipe-table">
+
+      <tr>
+    <td colspan="5" class="recipe-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStuhaRCUkodsCuLEqkrFdtjce_2M-h6UHHgYpfWUGStw&s=10" alt="Hyderabadi Biryani">
+        <div class="image-overlay">
+            <h3>Hyderabadi Biryani</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A fragrant rice dish from Hyderabad,
+        made with basmati rice and aromatic spices. 
+        Ingredients include basmati rice, chicken, yogurt, onions, tomatoes, and a blend of spices. 
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Medium
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        1 hr 15 min
+    </td>
+    <td><a href="hyderabadi-biryani.html"><button type="button" >View Recipe</button></a></td>
+</section>
+</tr>
+<tr>
+ <td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/736x/a9/59/c9/a959c9d5f125055f3cd794d814c75c8d.jpg" alt="Panneer Biryani">
+        <div class="image-overlay">
+            <h3>Panneer Biryani</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A vegetarian version of the classic biryani,
+        made with paneer and aromatic spices.
+        Ingredients include basmati rice, paneer, yogurt, onions, tomatoes, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Medium
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+       45-60 minutes
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+<tr>
+<td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/736x/8f/3d/9d/8f3d9d6031625b6ba5362bf77fe47a43.jpg" alt="Mutton Biryani">
+        <div class="image-overlay">
+            <h3>Mutton Biryani</h3>
+        </div>
+    </td>
+</tr>
+ <tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A fragrant rice dish from Hyderabad,
+        made with basmati rice and aromatic spices.
+        Ingredients include basmati rice, mutton, yogurt, onions, tomatoes, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Hard
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        2 hr 30min
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+<tr>
+ <td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/736x/9d/d7/b5/9dd7b58565004540be75ff5f2a660259.jpg" alt="Panneer Biryani">
+        <div class="image-overlay">
+            <h3>Chole Bhature</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A popular North Indian dish consisting of spicy chickpeas (chole) served with deep-fried bread (bhature). 
+        Ingredients include chickpeas, onions, tomatoes, garlic, ginger, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Medium
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        1 hr 15 min
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+
+<tr>
+ <td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/736x/e9/18/5f/e9185f17a4695fa9a17a78fdb70c12aa.jpg" alt="Panneer Biryani">
+        <div class="image-overlay">
+            <h3>Paneer Paratha</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A popular Indian flatbread stuffed with a spiced mixture of paneer (Indian cottage cheese) and herbs.
+        Ingredients include whole wheat flour, paneer, green chilies, coriander leaves, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Easy
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        30-40 minutes
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+
+
+<tr>
+ <td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/1200x/a4/3e/39/a43e3921098f715bba22970919a6fa0b.jpg" alt="Phav Bhaji">
+        <div class="image-overlay">
+            <h3>Phav Bhaji</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A popular Indian street food dish consisting of a spicy vegetable mash (bhaji) served with buttered bread rolls (pav). 
+        Ingredients include mixed vegetables, potatoes, onions, tomatoes, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Easy
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        30-40 minutes
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+<tr>
+ <td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/1200x/a4/62/02/a46202bc73e06474b1fd08e0d708cfb9.jpg" alt="Fried Rice & Manchurian">
+        <div class="image-overlay">
+            <h3>Fried Rice & Manchurian</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A popular Indo-Chinese dish consisting of stir-fried rice (fried rice) served with deep-fried vegetable or meat balls (manchurian) in a tangy sauce. 
+        Ingredients include rice, mixed vegetables, soy sauce, garlic, ginger, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Medium
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        45-60 minutes
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+<tr>
+ <td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/736x/9c/9b/f6/9c9bf648a8be3469ded7e5da83fb2e3e.jpg" alt="Egg Biryani">
+        <div class="image-overlay">
+            <h3>Egg Biryani</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A fragrant rice dish from Hyderabad, made with basmati rice and aromatic spices, served with boiled eggs. 
+        Ingredients include basmati rice, eggs, yogurt, onions, tomatoes, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Medium
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        1 hr 15 min
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+<tr>
+ <td colspan="5" class="recipe-image">
+        <img src="https://i.pinimg.com/736x/c7/03/a0/c703a0ceb6479cbf9471de919edbdd3d.jpg" alt="Prawns Curry">
+        <div class="image-overlay">
+            <h3>Prawns Curry</h3>
+        </div>
+    </td>
+</tr>
+<tr>
+    <section class="recipe-table-section">
+    <td>
+      <strong>Description</strong><br>
+        A popular South Indian dish consisting of prawns cooked in a spicy and tangy coconut-based curry. 
+        Ingredients include prawns, coconut milk, onions, tomatoes, garlic, ginger, and a blend of spices.
+      
+    </td>
+
+    <td>
+        <strong>Difficulty</strong><br>
+        Medium
+    </td>
+
+    <td>
+        <strong>Time</strong><br>
+        45-60 minutes
+    </td>
+    <td><button>View Recipe</button></td>
+</section>
+</tr>
+
+    </table>
+
+</section>
+<section class="button-section">
+    <button type="button" style="float:left;" onclick="window.location.href='TheRecipe1.html'" style="margin: 20px auto; display: block;">Back to Home</button>
+    <button type="button" style="float:right;" onclick="window.location.href='regions.html'" style="margin: 20px auto; display: block;">Next</button>
+</section>
+</section>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley:wght@400;700&display=swap" rel="stylesheet">
+    <head>
+  <title>The Recipe House</title>
+
+  <style>
+    *{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+         }
+    h1{
+        font-family: 'Tangerine', cursive;
+        font-size: 70px;
+        color: #0f0404;
+    }
+     h2{
+        font-family: 'sans-serif', cursive;
+        font-size: 20px;
+        color: #0f0404;
+    }
+    h3{
+        font-family:'Tangerine', cursive;
+        font-size: 50px;
+        color: #f1ecec;
+    }
+    p{
+        font-family: 'Arial', cursive;
+        font-size: 20px;
+        letter-spacing: 2px;
+
+    }
+
+	body{
+		font-family: 'Arial', cursive;
+        font-size: 30px;
+        text-align: center;
+		background-color: #c9841c;
+		color: #f5f1f1 ;
+	}
+	
+	nav{
+		display : flex;	
+        justify-content:space-between;
+        align-items:center;
+        padding: 20px;
+        background-color: #fffffff5;
+    }
+    nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav h1{
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    color: #0f0404; 
+    font-weight: bold;
+
+}
+nav ul li a {
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    color: #0f0404;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #c9841c;
+}
+.hero {
+    height:2000px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("https://i.pinimg.com/1200x/1c/52/da/1c52da47122a723758622a3c2f9cad4d.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.search-bar input {
+    width: 300px;
+    padding: 10px 15px;
+    border: 2px solid #c9841c;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 14px;
+    color: #c9841c;
+    outline:#f5f4f3;
+}
+.search-bar button {
+    padding: 10px 14px;
+    border: 2px solid #c9841c;
+    border-radius:20px;
+    background-color: white;
+    cursor: pointer;
+}
+.filters {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.filters h2 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #faf7f7f7;
+
+}
+.filter h3{
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    color: #f1ecec0f;
+  
+}
+.filters select {
+    padding: 12px 20px;
+    margin: 10px;
+    border: 1px solid #c9841c;
+    border-radius: 25px;
+    background-color:none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.filters button{
+    padding: 12px 20px;
+    margin: 10px;
+    border: 1px solid #c9841c;
+    border-radius: 25px;
+    background-color:none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.filters button:hover {
+    background-color: #c9841c;
+    color: #ffffff;
+}
+  .section-title {
+             position: absolute;
+    top: 580px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+            text-align: center;
+            font-family: 'Tangerine', cursive;
+            font-size: 55px;
+            margin-bottom: 30px;
+        
+        }
+ .recipes { 
+            position: absolute;
+            top: 650px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px 20px 50px;
+        }
+        .recipe-card {
+            width: 250px;
+            background-color: #eeeef2;
+            border-radius: 15px;
+            overflow: hidden;
+            color: #0f0404;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .recipe-card:hover {
+            transform: translateY(-8px);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .recipe-card h2 {
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+            padding: 10px;
+        }
+        .recipe-card p {
+            color: #555;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 0 10px 15px;
+        }
+         .regions {
+             position: absolute;
+            top: 1300px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px 50px 70px;
+        }
+        .region-card {
+            width: 250px;
+            background-color: #eeeef2;
+            border-radius: 15px;
+            overflow: hidden;
+            color: #0f0404;
+            cursor: pointer;
+            transition: transform 0.3s;
+    
+        }
+        .region-card:hover {
+            transform: scale(1.05);
+        }
+        .region-card img {
+             width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+        .region-card h3 {
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+            padding: 10px;
+            color: #0f0404;
+        }
+        .region-card p{
+           color: #555;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 0 10px 15px;
+        }
+        .region-list {
+                display: flex;
+                justify-content: center;
+                 gap: 25px;
+}
+.region h3{
+    font-family: 'Tangerine', cursive;
+    font-size: 40px;
+    color: #f1ecec;
+    text-align: center;
+}
+.about {
+    position: absolute;
+    top: 1800px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    padding: 20px 50px 70px;
+}
+.about h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 55px;
+    color: #f9f7f7;
+    margin-bottom: 20px;
+}
+.about p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #fefcfc;
+}
+    
+  </style>
+</head>
+
+<body>
+       <nav>
+    <h1>The Recipe House</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for a recipe...">
+        <button>🔍</button>
+    </div>
+    <ul>
+        <li><a href="TheRecipe1.html">Home</a></li>
+        <li><a href="TheBook.html">Recipes</a></li>
+        <li><a href="regions.html">About</a></li>
+        <li><a href="signin.html">User</a></li>
+    </ul>
+</nav>
+<main>
+
+<section class="hero">
+      <section class="filters">
+         <h3><b>Welcome To the Recipe House</b></h3>
+         <h2><br>A taste of India,One Recipe at a Time<br>Discover traditional flavours from every corner of India</h2>
+         <br>
+         <h3>Find Your Recipe</h3>
+
+   <select>
+        <option>Choose Type</option>
+        <option>Vegetarian</option>
+        <option>Non-Vegetarian</option>
+    </select>
+
+    <select>
+        <option>Choose Meal</option>
+        <option>Breakfast</option>
+        <option>Lunch</option>
+        <option>Dinner</option>
+        <option>Snacks</option>
+    </select>
+
+    <select>
+        <option>Choose Difficulty</option>
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+     </select>
+    <button type="button">Apply</button>
+   </section>
+
+    <section>
+            <h3 class="section-title">
+                Our Most Loved Recipes ♡
+            </h3>
+            <div class="recipes">
+                <div class="recipe-card">
+                    <a href="hyderabadi-biryani.html">
+                    <img
+                        src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=500&q=80"
+                        alt="Biryani"
+                    ></a>
+                    <h2>Hyderabadi Biryani</h2>
+                    <p>
+                        A famous aromatic rice dish from Hyderabad.
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img
+                        src="https://media.istockphoto.com/id/909895492/photo/masala-dosa-south-indian-food.webp?a=1&b=1&s=612x612&w=0&k=20&c=7gpsPyo4qOHcw0wHtmMnTcU4KcAKCtveQymFAX9o6Go="
+                        alt="Dosa"
+                    >
+                    <h2>Masala Dosa</h2>
+                    <p>
+                        A crispy South Indian classic served with chutney.
+                    </p>
+                </div>
+
+                <div class="recipe-card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK4_EOAKDkBbfC4vEKIltVJwzM556zAHfuLEoP3p6z0A&s=10"
+                        alt="Indian Food"
+                    >
+                    <h2>Paneer Tikka</h2>
+                    <p>
+                        Spiced and grilled paneer with Indian flavours.
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1695297515622-d0991a12efe3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2Ftb3NhfGVufDB8fDB8fHww"
+                        alt="Indian Food"
+                    >
+                    <h2>Samosa</h2>
+                    <p>
+                         Chatpata snack filled with spiced potatoes and peas.
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1700746098867-29b475283b51?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Indian Food"
+                    >
+                    <h2>Momos</h2>
+                    <p>
+                         North Indian dumplings filled with vegetables or meat, served with spicy sauce.
+                    </p>
+                </div>
+            </div>
+     </section>
+    
+            <section class="regions">
+                    <h3>Search Recipes by Regions ⚲</h3>
+
+                     <div class="region-list">
+
+                         <div class="region-card">
+                            <img src="https://i.pinimg.com/736x/62/c6/3c/62c63c7d31d76353e9f45a9966f745bd.jpg" alt="North Indian Food">
+                            <h3>North India</h3>
+                         </div>
+
+                         <div class="region-card">
+                            <img src="https://i.pinimg.com/736x/a6/75/c4/a675c447635f82c44bb5b4690b0f5be4.jpg" alt="South Indian Food">
+                            <h3>South India</h3>
+                         </div>
+
+                         <div class="region-card">
+                            <img src="https://i.pinimg.com/736x/3c/cf/b5/3ccfb5888b6621d08cbb8445cee15536.jpg" alt="East Indian Food">
+                            <h3>North-East India</h3>
+                         </div>
+
+                         <div class="region-card">
+                            <img src="https://i.pinimg.com/736x/1e/a3/10/1ea310a264a55c1cd640b5008062f52d.jpg" alt="West Indian Food">
+                            <h3>West India</h3>
+                         </div>
+
+                    </div>
+            </section>
+            <section class="about">
+    <h2>About The Recipe House</h2>
+    <p>
+        Explore the rich and diverse flavours of India,
+        discover recipes from different regions,
+        and bring traditional dishes into your kitchen.
+    </p>
+</section>
+</section>
+
+    </main>
+ <footer>
+        <p>&copy; 2024 The Recipe House. All rights reserved.</p>
+    </footer>   
+
+    
+</body>
+</html>
