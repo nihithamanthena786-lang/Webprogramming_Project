@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Interacting Mode</title>
+    <link rel="stylesheet" href="recipeHouse.css">
+</head>
+
+<body>
+
+<nav>
+    <h1>The Recipe House</h1>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search for a recipe...">
+        <button>🔍</button>
+    </div>
+
+    <ul>
+        <li><a href="TheRecipe1.html">Home</a></li>
+        <li><a href="TheBook.html">Recipes</a></li>
+        <li><a href="regions.html">About</a></li>
+        <li><a href="signin.html">User</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+<h1>---------------------------------------------------</h1>
+    <div class="cooking-slideshow">
+
+        <div class="slide-track" id="slide-track">
+
+            <!-- STARTING SLIDE -->
+            <div class="recipe-slide">
+                <img src="chefgreet.gif"
+                     class="chef-animation"
+                     alt="Animated chef">
+
+                <button id="start-slideshow">Lets start→</button>
+            </div>
+
+            <!-- SLIDE 1 -->
+            <div class="recipe-slide">
+                <img src="https://media.istockphoto.com/id/1352622831/photo/cooking-onion-rings-in-frying-pan-closeup.jpg?s=612x612&w=0&k=20&c=025kv6Kr_PIzc0dHF5hmLUCWkkySwAc7DiaZ7piWLLU="
+                     alt="Frying onions">
+
+                <h3>01. Fry the onions</h3>
+                <p>Thinly slice the onions and fry until golden brown.</p>
+
+                <div class="slide-timer" data-duration="300">
+                    <h2 class="timer-display">05:00</h2>
+                    <button class="start-timer">Start</button>
+                    <button class="pause-timer">Pause</button>
+                    <button class="reset-timer">Reset</button>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="recipe-slide">
+                <img src="https://media.istockphoto.com/id/1071714902/photo/marinated-chicken-pieces.webp?b=1&s=612x612&w=0&k=20&c=qlij1lapOuoSWpCS6QbSZ0NFaW8ZBEoAnjOXXAzOTOg="
+                     alt="Marinating chicken">
+
+                <h3>02. Marinate the chicken</h3>
+                <p>Mix chicken with curd, ginger-garlic paste and spices.</p>
+
+                <div class="slide-timer" data-duration="1800">
+                    <h2 class="timer-display">30:00</h2>
+                    <button class="start-timer">Start</button>
+                    <button class="pause-timer">Pause</button>
+                    <button class="reset-timer">Reset</button>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="recipe-slide">
+                <img src="https://media.istockphoto.com/id/155432058/photo/basmati-rice.jpg?s=1024x1024&w=is&k=20&c=b2vUgCm2GlplfjieNx_GrmIVlDLlxUTcWqu-tb-mBsw="
+                     alt="Preparing rice">
+
+                <h3>03. Prepare the rice</h3>
+                <p>Wash, soak and boil basmati rice until 70% cooked.</p>
+
+                <div class="slide-timer" data-duration="600">
+                    <h2 class="timer-display">10:00</h2>
+                    <button class="start-timer">Start</button>
+                    <button class="pause-timer">Pause</button>
+                    <button class="reset-timer">Reset</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- NAVIGATION FOR COOKING SLIDES -->
+        <div class="slide-controls" id="slide-controls" style="display:none;">
+            <button id="previous-slide">←</button>
+            <span id="slide-counter">2 / 4</span>
+            <button id="next-slide">→</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="interact.js"></script>
+
+</body>
+</html>
