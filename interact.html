@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Qwigley:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Interacting Mode</title>
+
     <link rel="stylesheet" href="recipeHouse.css">
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
+
     <h1>The Recipe House</h1>
 
     <div class="search-bar">
@@ -29,83 +34,253 @@
         <li><a href="regions.html">About</a></li>
         <li><a href="signin.html">User</a></li>
     </ul>
+
 </nav>
 
+
+<!-- HERO SECTION -->
+
 <div class="hero">
-<h1>---------------------------------------------------</h1>
+
     <div class="cooking-slideshow">
 
         <div class="slide-track" id="slide-track">
 
+
             <!-- STARTING SLIDE -->
-            <div class="recipe-slide">
+
+            <div class="recipe-slide starting-slide">
+
                 <img src="chefgreet.gif"
                      class="chef-animation"
                      alt="Animated chef">
 
-                <button id="start-slideshow">Lets start→</button>
+                <button id="start-slideshow">
+                    Let's start →
+                </button>
+
             </div>
 
+
             <!-- SLIDE 1 -->
+
             <div class="recipe-slide">
+
                 <img src="https://media.istockphoto.com/id/1352622831/photo/cooking-onion-rings-in-frying-pan-closeup.jpg?s=612x612&w=0&k=20&c=025kv6Kr_PIzc0dHF5hmLUCWkkySwAc7DiaZ7piWLLU="
                      alt="Frying onions">
 
                 <h3>01. Fry the onions</h3>
-                <p>Thinly slice the onions and fry until golden brown.</p>
+
+                <p>
+                    Thinly slice the onions and heat oil in a deep pan.
+        Fry them in batches over medium heat until golden brown
+        and crispy. Remove and drain the excess oil.
+        Keep some fried onions aside for layering.
+                </p>
 
                 <div class="slide-timer" data-duration="300">
+
                     <h2 class="timer-display">05:00</h2>
+
                     <button class="start-timer">Start</button>
                     <button class="pause-timer">Pause</button>
                     <button class="reset-timer">Reset</button>
+
                 </div>
+
             </div>
 
+
             <!-- SLIDE 2 -->
+
             <div class="recipe-slide">
-                <img src="https://media.istockphoto.com/id/1071714902/photo/marinated-chicken-pieces.webp?b=1&s=612x612&w=0&k=20&c=qlij1lapOuoSWpCS6QbSZ0NFaW8ZBEoAnjOXXAzOTOg="
+
+                <img src="C:\Users\nihit\OneDrive\RecipeHouse\pictures\chicken-marinate.jpg"
                      alt="Marinating chicken">
 
                 <h3>02. Marinate the chicken</h3>
-                <p>Mix chicken with curd, ginger-garlic paste and spices.</p>
+
+                <p>
+                    In a large bowl, combine chicken pieces with thick curd,
+        ginger-garlic paste, red chilli powder, turmeric,
+        biryani masala, lemon juice and salt.
+        Add mint and coriander leaves. Mix well and coat
+        every piece. Refrigerate for at least 1 hour.
+                </p>
 
                 <div class="slide-timer" data-duration="1800">
+
                     <h2 class="timer-display">30:00</h2>
+
                     <button class="start-timer">Start</button>
                     <button class="pause-timer">Pause</button>
                     <button class="reset-timer">Reset</button>
+
                 </div>
+
             </div>
+
 
             <!-- SLIDE 3 -->
+
             <div class="recipe-slide">
-                <img src="https://media.istockphoto.com/id/155432058/photo/basmati-rice.jpg?s=1024x1024&w=is&k=20&c=b2vUgCm2GlplfjieNx_GrmIVlDLlxUTcWqu-tb-mBsw="
-                     alt="Preparing rice">
+
+                <img src="C:\Users\nihit\OneDrive\RecipeHouse\pictures\ricemaking.jpg"
 
                 <h3>03. Prepare the rice</h3>
-                <p>Wash, soak and boil basmati rice until 70% cooked.</p>
+
+                <p>
+                        Take long-grain basmati rice and wash it gently
+        two to three times until the water becomes clearer.
+        Drain the water and soak the rice in fresh water
+        for about 30 minutes. This helps the grains cook evenly.
+                </p>
 
                 <div class="slide-timer" data-duration="600">
+
                     <h2 class="timer-display">10:00</h2>
+
                     <button class="start-timer">Start</button>
                     <button class="pause-timer">Pause</button>
                     <button class="reset-timer">Reset</button>
+
                 </div>
+
             </div>
+             <!-- STEP 4: BOIL RICE -->
+
+            <div class="recipe-slide">
+
+                 <img src="C:\Users\nihit\OneDrive\RecipeHouse\pictures\make-basmati-rice-for-biryani.jpg"
+                  alt="Basmati rice boiling with whole spices">
+
+             <h3>04. Parboil the rice</h3>
+
+             <p>
+                     Bring plenty of water to a boil with salt,
+                     bay leaf, cinnamon, cloves and cardamom.
+                      Add the soaked rice and cook until it is
+                      approximately 70% done. The grains should
+                     still have a slight bite. Drain immediately.
+             </p>
+
+                <div class="slide-timer" data-duration="480">
+
+                 <h2 class="timer-display">08:00</h2>
+
+                 <button class="start-timer">Start</button>
+                 <button class="pause-timer">Pause</button>
+                  <button class="reset-timer">Reset</button>
+
+                </div>
+
+            </div>
+            <!-- STEP 5: LAYER BIRYANI -->
+
+<div class="recipe-slide">
+
+    <img src="C:\Users\nihit\OneDrive\RecipeHouse\pictures\layering.jpg"
+         alt="Layering chicken and basmati rice in handi">
+
+    <h3>05. Layer the biryani</h3>
+
+    <p>
+        Take a heavy-bottomed handi and spread the marinated
+        chicken evenly at the bottom. Add a layer of
+        partially cooked rice on top. Sprinkle fried onions,
+        mint leaves and coriander leaves. Add another layer
+        of rice and repeat the toppings.
+    </p>
+
+    <div class="slide-timer" data-duration="300">
+
+        <h2 class="timer-display">05:00</h2>
+
+        <button class="start-timer">Start</button>
+        <button class="pause-timer">Pause</button>
+        <button class="reset-timer">Reset</button>
+
+    </div>
+
+</div>
+        <!-- STEP 6: DUM COOKING -->
+
+<div class="recipe-slide">
+
+    <img src="C:\Users\nihit\OneDrive\RecipeHouse\pictures\saffron.jpg"
+         alt="Saffron milk being added to layered biryani">
+
+    <h3>06. Add saffron and cook on dum</h3>
+
+    <p>
+        Pour warm saffron-infused milk over the rice.
+        Add melted ghee and a little reserved fried onion.
+        Cover the handi tightly with a lid and seal the edges
+        with dough. Place it on a flat pan over low heat
+        and cook for approximately 30 minutes.
+    </p>
+
+    <div class="slide-timer" data-duration="1800">
+
+        <h2 class="timer-display">30:00</h2>
+
+        <button class="start-timer">Start</button>
+        <button class="pause-timer">Pause</button>
+        <button class="reset-timer">Reset</button>
+
+    </div>
+
+</div>
+<!-- STEP 7: REST AND SERVE -->
+
+<div class="recipe-slide">
+
+    <img src="C:\Users\nihit\OneDrive\RecipeHouse\pictures\Finished.jpg"
+         alt="Finished Hyderabadi chicken dum biryani">
+
+    <h3>07. Rest and serve!</h3>
+
+    <p>
+        Turn off the heat and allow the biryani to rest
+        for 10 minutes before opening the handi.
+        Gently fluff the rice from the sides without
+        breaking the grains. Serve hot with raita,
+        salan and freshly sliced onions.
+    </p>
+
+    <div class="slide-timer" data-duration="600">
+
+        <h2 class="timer-display">10:00</h2>
+
+        <button class="start-timer">Start</button>
+        <button class="pause-timer">Pause</button>
+        <button class="reset-timer">Reset</button>
+
+    </div>
+
+</div>
+
+
 
         </div>
 
-        <!-- NAVIGATION FOR COOKING SLIDES -->
+
+        <!-- SLIDE NAVIGATION -->
+
         <div class="slide-controls" id="slide-controls" style="display:none;">
+
             <button id="previous-slide">←</button>
-            <span id="slide-counter">2 / 4</span>
+
+            <span id="slide-counter">1 / 7</span>
+
             <button id="next-slide">→</button>
+
         </div>
 
     </div>
 
 </div>
+
 
 <script src="interact.js"></script>
 

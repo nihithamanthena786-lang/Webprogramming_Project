@@ -1,57 +1,74 @@
-*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-         }
-    h1{
-        font-family: 'Tangerine', cursive;
-        font-size: 70px;
-        color: #0f0404;
-    }
-     h2{
-        font-family: 'sans-serif', cursive;
-        font-size: 20px;
-        color: #0f0404;
-    }
-    h3{
-        font-family:'Tangerine', cursive;
-        font-size: 50px;
-        color: #f1ecec;
-    }
-    p{
-        font-family: 'Arial', cursive;
-        font-size: 20px;
-        letter-spacing: 2px;
 
-    }
+/* GENERAL RESET */
 
-	body{
-		font-family: 'Arial', cursive;
-        font-size: 30px;
-        text-align: center;
-		background-color: #c9841c;
-		color: #f5f1f1 ;
-	}
-	
-	nav{
-		display : flex;	
-        justify-content:space-between;
-        align-items:center;
-        padding: 20px;
-        background-color: #fffffff5;
-    }
-    nav ul {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* HEADINGS AND TEXT */
+
+h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 70px;
+    color: #0f0404;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #0f0404;
+}
+
+h3 {
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    color: #f1ecec;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+
+/* BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    background-color: #c9841c;
+    color: #f5f1f1;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fffffff5;
+}
+
+nav ul {
     display: flex;
     gap: 20px;
     list-style: none;
 }
-nav h1{
+
+nav h1 {
     font-family: 'Tangerine', cursive;
     font-size: 50px;
-    color: #0f0404; 
+    color: #0f0404;
     font-weight: bold;
-
 }
+
 nav ul li a {
     font-family: 'Tangerine', cursive;
     font-size: 30px;
@@ -59,11 +76,18 @@ nav ul li a {
     font-weight: bold;
     text-decoration: none;
 }
+
 nav ul li a:hover {
     color: #c9841c;
 }
+
+
+/* HERO SECTION */
+
 .hero {
-    height:2000px;
+    min-height: 100vh;
+    padding: 1px 0;
+
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url("https://i.pinimg.com/1200x/1c/52/da/1c52da47122a723758622a3c2f9cad4d.jpg");
@@ -71,14 +95,18 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-     background-attachment: fixed;
+    background-attachment: fixed;
 }
+
+
+/* SEARCH BAR */
 
 .search-bar {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .search-bar input {
     width: 300px;
     padding: 10px 15px;
@@ -87,56 +115,156 @@ nav ul li a:hover {
     background-color: white;
     font-size: 14px;
     color: #c9841c;
-    outline:#f5f4f3;
+    outline: none;
 }
+
 .search-bar button {
     padding: 10px 14px;
     border: 2px solid #c9841c;
-    border-radius:20px;
+    border-radius: 20px;
     background-color: white;
 }
 
+
+/* COOKING SLIDESHOW CARD */
+
 .cooking-slideshow {
-    width: 100%;
-    max-width: 950px;   
-    margin:30px auto;
-    padding:25px;
-    background:rgba(255, 255, 255, 0.75);
-    backdrop-filter:blur(10px);
-    -wekit-backdrop-filter:blur(10px);
-    border-radius:15px;
+    width: 65%;
+    max-width: 650px;
+
+    height: 420px;
+
+    margin: 25px auto;
+    padding: 50px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 15px;
     overflow: hidden;
     position: relative;
 }
+.cooking-slideshow.started {
+    height: auto;
+    min-height: 350px;
+}
+
+/* SLIDE TRACK */
 
 .slide-track {
     display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
     transition: transform 0.6s ease-in-out;
 }
 
+
+/* INDIVIDUAL SLIDES */
+
 .recipe-slide {
+    flex: 0 0 100%;
+    width: 100%;
     min-width: 100%;
-    flex-shrink: 0;
-    padding: 25px;
+
+    padding: 15px;
+
     text-align: center;
 }
 
+
+/* COOKING SLIDE IMAGES */
+
 .recipe-slide img {
-    width: 75%;
-    height: 450px;
+    width: 70%;
+    height: 300px;
+
     object-fit: cover;
+
     border-radius: 8px;
 }
+
+
+/* COOKING SLIDE HEADINGS */
 
 .recipe-slide h3 {
     color: #754719;
     margin: 20px;
 }
 
+
+/* COOKING SLIDE DESCRIPTION */
+
 .recipe-slide p {
     color: #2b1b0e;
     font-size: 18px;
 }
+
+
+/* COMPACT STARTING CARD */
+
+.starting-slide {
+    position: relative;
+    height: 320px;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* FULL CHEF GIF */
+
+.starting-slide .chef-animation {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+    object-position: center center;
+
+    border-radius: 15px;
+    z-index: 1;
+}
+
+/* START BUTTON */
+
+#start-slideshow {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 10px 25px;
+
+    border: 1px solid #754719;
+    border-radius: 20px;
+
+    background: white;
+    color: #754719;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+#start-slideshow:hover {
+    background: #754719;
+    color: white;
+}
+
+
+/* TIMER */
 
 .slide-timer {
     margin: 25px;
@@ -147,68 +275,74 @@ nav ul li a:hover {
     color: #c9841c;
 }
 
+
+/* TIMER BUTTONS */
+
 .slide-timer button,
 .slide-controls button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     margin: 5px;
+
     cursor: pointer;
+
     border: 1px solid #754719;
+
     background: white;
     color: #754719;
+
     border-radius: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    transition: all 0.3s ease;
 }
+
+
+/* BUTTON HOVER */
+
+.slide-timer button:hover,
+.slide-controls button:hover {
+    background: #754719;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* SLIDE NAVIGATION */
 
 .slide-controls {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 25px;
     padding: 20px;
+
     color: #754719;
 }
+
+
+/* VIDEO */
+
 .recipe-slide video {
-    width: 80%;
-    height: 300px;
+    width: 100%;
+    height: 600px;
+
     object-fit: cover;
+
     border-radius: 12px;
-    margin: 15px auto;
+
+    margin: 10px auto;
 }
-.book h1{
+
+
+/* BOOK HEADING */
+
+.book h1 {
     font-family: 'Tangerine', cursive;
     font-size: 60px;
-    color: #f9f7f7; 
+    color: #f9f7f7;
     font-weight: bold;
-
 }
-
-/* Elegant Starting Slide Button */
-
-#start-slideshow {
-    padding: 13px 38px;
-    border: 1.5px solid #5c4033;
-    border-radius: 40px;
-
-    background: #f5ead8;
-    color: #5c4033;
-
-    font-family: 'Parisienne', cursive;
-    font-size: 27px;
-    letter-spacing: 1px;
-
-    cursor: pointer;
-    transition: all 0.35s ease;
-    box-shadow: 0 3px 8px rgba(60, 35, 20, 0.12);
-}
-
-#start-slideshow:hover {
-    background: #5c4033;
-    color: #fff4e6;
-
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(60, 35, 20, 0.2);
-}
-
-#start-slideshow:active {
-    transform: translateY(0);
-}
-

@@ -37,6 +37,13 @@ function showSlide(index) {
 startButton.addEventListener("click", function () {
     showSlide(1);
 });
+document.getElementById("start-slideshow")
+    .addEventListener("click", function () {
+
+        document.querySelector(".cooking-slideshow")
+            .classList.add("started");
+
+    });
 
 // Previous slide
 previousButton.addEventListener("click", function () {
@@ -47,6 +54,7 @@ previousButton.addEventListener("click", function () {
 nextButton.addEventListener("click", function () {
     showSlide(currentSlide + 1);
 });
+
 
 
 // INDEPENDENT COOKING TIMERS
